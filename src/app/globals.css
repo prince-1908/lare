@@ -1,2 +1,50 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+
+:root {
+  --primary-color: #040D12;
+  --secondary-color: #183D3D;
+  --thirt-color: #5C8374;
+  --fourth-color: #93B1A6;
+}
+
+body {
+  color: var(--fourth-color);
+}
+
+/* BACKGROUND */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-third {
+  background-color: var(--thirt-color);
+}
+
+/* TEXT */
+.text-primary {
+  color: var(--primary-color);
+}
+
+/* UTILS */
+.hide-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  color: white;
+  clip-path: inset(0 100% 0 0);
+  animation: l5 5s steps(18) infinite;
+}
+.loader:before {
+  content:"Fetching Answer..."
+}
+@keyframes l5 {to{clip-path: inset(0 -1ch 0 0)}}
